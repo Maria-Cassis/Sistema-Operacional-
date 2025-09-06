@@ -47,7 +47,7 @@ def executar_simulacao():
 
         processos_desbloqueados = []
         for pid_bloqueado in fila_bloqueados:
-            if random.random() < 0.3: # 30% de chance de desbloquear
+            if random.random() < 0.3: 
                 processos[pid_bloqueado].estado = 'PRONTO'
                 print(f"[{ciclos_globais}] PID {pid_bloqueado} >> DESBLOQUEADO >> PRONTO")
                 processos_desbloqueados.append(pid_bloqueado)
@@ -102,4 +102,5 @@ def executar_simulacao():
 
 if __name__ == "__main__":
     executar_simulacao()
+
     
